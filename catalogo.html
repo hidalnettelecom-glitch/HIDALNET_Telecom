@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5BYX54GF6W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5BYX54GF6W');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIDALNET Smart Security - Catálogo de Videovigilancia</title>
+    
+    <style>
+        :root {
+            --color-primario: #0a192f;
+            --color-secundario: #00b4d8;
+            --azul-tecnologico: #0052cc;
+            --color-pizarra: #4a5a6a;       
+            --color-fondo: #f4f6f9;
+            --color-tarjeta: #ffffff;       
+            --texto-oscuro: #333333;
+            --texto-mutado: #555555;
+            --borde-input: #cccccc;
+            --fuente-titulos: 'Orbitron', 'Segoe UI', sans-serif;
+            --fuente-cuerpo: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        body {
+            background-color: var(--color-fondo);
+            color: var(--texto-oscuro);
+            line-height: 1.6;
+        }
+
+        /* NAVEGACIÓN */
+        header.site-header {
+            background-color: var(--color-primario);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo h1 {
+            color: white;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            font-family: var(--fuente-titulos);
+        }
+
+        .logo span {
+            color: var(--color-secundario);
+            font-family: var(--fuente-titulos);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--color-secundario);
+        }
+               /* IMAGEN EN EL MENÚ (UBICADA AL CENTRO) */
+        .img-menu-header {
+            width: 70px; /* Tamaño más grande y visible */
+            height: 100px; /* Proporción rectangular ajustada */
+            object-fit: cover; /* Evita que la imagen se distorsione */
+            border-radius: 6px; /* Bordes rectangulares limpios */
+            border: none; /* Se elimina el contorno de color */
+            transition: transform 0.3s ease;
+        }
+
+        .img-menu-header:hover {
+            transform: scale(1.08); /* Efecto sutil al pasar el cursor */
+        }
+
+        .img-menu-header:hover {
+            transform: scale(1.1);
+        }
+
+
+        /* BANNER */
+        .banner-interno {
+            background: linear-gradient(135deg, rgba(10,25,47,0.95) 0%, rgba(0,82,204,0.85) 100%);
+            color: white;
+            padding: 4rem 5%;
+            text-align: center;
+            border-bottom: 4px solid var(--color-secundario);
+        }
+
+        .banner-interno h2 {
+            font-family: var(--fuente-titulos);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .banner-interno p {
+            color: #ccd6f6;
+            font-size: 1.1rem;
+        }
+
+        /* CONTENEDOR CATÁLOGO */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .seccion-titulo {
+            border-left: 5px solid var(--color-secundario);
+            padding-left: 15px;
+            margin: 50px 0 25px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .seccion-titulo h2 {
+            font-family: var(--fuente-titulos);
+            font-size: 1.5rem;
+            color: var(--color-primario);
+            text-transform: uppercase;
+        }
+
+        .seccion-titulo span {
+            font-size: 0.8rem;
+            font-family: var(--fuente-cuerpo);
+            background-color: var(--color-primario);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+
+        .grid-catalogo {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* TARJETA DE PRODUCTO */
+        .camara-card {
+            background-color: var(--color-tarjeta);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e1e8ed;
+        }
+
+        .camara-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 24px rgba(0, 180, 216, 0.2);
+            border-color: var(--color-secundario);
+        }
+
+        .camara-img {
+            width: 100%;
+            height: 180px;
+            background-color: #e9eff4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: var(--color-pizarra);
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .camara-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background-color: var(--color-primario);
+            color: white;
+            padding: 4px 12px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 3px;
+            border-left: 3px solid var(--color-secundario);
+            z-index: 10;
+        }
+
+        .camara-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .camara-sku {
+            font-size: 0.75rem;
+            color: var(--azul-tecnologico);
+            font-weight: bold;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .camara-nombre {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--color-primario);
+        }
+
+        .camara-desc {
+            font-size: 0.85rem;
+            color: #555;
+            margin-bottom: 15px;
+            height: 75px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            line-clamp: 4; 
+        }
+
+        .camara-accesorios {
+            margin-top: auto;
+            padding-top: 10px;
+            border-top: 1px dashed #e1e8ed;
+            margin-bottom: 15px;
+        }
+
+        .camara-accesorios p {
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: var(--color-primario);
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .camara-accesorios ul {
+            list-style: none;
+            font-size: 0.75rem;
+            color: var(--texto-mutado);
+        }
+
+        .camara-accesorios ul li {
+            margin-bottom: 2px;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        .camara-accesorios ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--color-secundario);
+        }
+
+        .camara-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #edf2f6;
+            padding-top: 15px;
+        }
+
+        .camara-precio {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--color-secundario);
+        }
+
+        .btn-ver {
+            background-color: var(--azul-tecnologico);
+            color: white;
+            border: none;
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-ver:hover {
+            background-color: var(--color-primario);
+        }
+
+        /* MODAL */
+        .modal-cotizacion {
+            display: none; 
+            position: fixed;
+            z-index: 2000;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(10, 25, 47, 0.7);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-cotizacion.activo {
+            display: flex;
+        }
+
+        .contenedor-formulario {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 550px;
+            position: relative;
+            animation: sliderIn 0.3s ease;
+        }
+
+        @keyframes sliderIn {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .cerrar-modal {
+            position: absolute;
+            top: 15px; right: 20px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #aaa;
+            transition: color 0.2s;
+        }
+
+        .cerrar-modal:hover { color: var(--texto-oscuro); }
+
+        .contenedor-formulario h3 {
+            color: var(--color-primario);
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            font-family: var(--fuente-titulos);
+        }
+
+        .contenedor-formulario p.sub {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            color: var(--color-primario);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--borde-input);
+            border-radius: 5px;
+            font-size: 0.95rem;
+            color: var(--texto-oscuro);
+            background-color: var(--color-fondo);
+        }
+
+        .form-group input:focus, 
+        .form-group select:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--azul-tecnologico);
+            background-color: white;
+        }
+
+        .btn-enviar {
+            background-color: var(--azul-tecnologico);
+            color: white;
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1rem;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .btn-enviar:hover {
+            background-color: var(--color-primario);
+        }
+
+        footer {
+            background-color: var(--color-primario);
+            color: white;
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 80px;
+            font-size: 0.9rem;
+            border-top: 3px solid var(--color-secundario);
+        }
+
+        @media (max-width: 768px) {
+            .banner-interno h2 { font-size: 1.8rem; }
+            .seccion-titulo { flex-direction: column; align-items: flex-start; gap: 8px; }
+            .seccion-titulo h2 { font-size: 1.2rem; }
+            .contenedor-formulario { padding: 1.5rem; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Hidal<span>net</span></h1>
+            </div>
+            <img src="hidalnet/logo.png" alt="Perfil/Icono" class="img-menu-header">
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="catalogo.html" class="active">Catálogo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner-interno">
+        <h2>Catálogo de Videovigilancia</h2>
+        <p>Selecciona el paquete ideal. Todos nuestros precios incluyen accesorios completos de instalación.</p>
+    </section>
+
+    <div class="container">
+
+        <div class="seccion-titulo">
+            <h2>01 / Línea Inalámbrica y Smart WiFi</h2>
+            <span>Cámaras Autónomas</span>
+        </div>
+
+        <div class="grid-catalogo">
+            <div class="camara-card">
+                <div class="camara-img">
+                    <span class="badge">8 Megapíxeles</span>
+                    <img src="img catalogo/HARMOLET.jpeg" alt="Cámara HARMOLET A8BQ">
+                </div>  
+                <div class="camara-info">
+                    <div>
+                        <p class="camara-sku">HN-HAM01</p>
+                        <h3 class="camara-nombre">HAMROLET A8BQ Wireless</h3>
+                        <p class="camara-desc">Doble lente de alta resolución, seguimiento inteligente automatizado, sensor de movimiento y audio bidireccional integrado con carcasa de policarbonato.</p>
+                    </div>
+                    <div class="camara-accesorios">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>MicroSD 32GB Western Digital</li>
+                            <li>Caja IP55 conexiones CCTV</li>
+                            <li>20 metros de cable Ethernet</li>
+                            <li>2 Conectores RJ45 instalados</li>
+                        </ul>
+                    </div>
+                    <div class="camara-footer">
+                        <span class="camara-precio">$1,600.00</span>
+                        <button class="btn-ver" onclick="abrirCotizacion('HAMROLET A8BQ Wireless 8MP (HN-HAM01)')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="camara-card">
+                <div class="camara-img">
+                    <span class="badge">6 Megapíxeles</span>
+                    <img src="img catalogo/DAHUA IP DOBLE.jpeg" alt="Cámara Dahua IP Doble Lente">
+                </div>
+                <div class="camara-info">
+                    <div>
+                        <p class="camara-sku">HN-DAH02</p>
+                        <h3 class="camara-nombre">Dahua IP Doble Lente WiFi</h3>
+                        <p class="camara-desc">Detección de humanos por algoritmo de IA, protección contra agua IP65, visión panorámica 360 grados y potente visión nocturna a color.</p>
+                    </div>
+                    <div class="camara-accesorios">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>1 Caja chica de conexiones IP55</li>
+                            <li>MicroSD 32GB Western Digital</li>
+                            <li>20 metros de cable UTP (Cobre)</li>
+                        </ul>
+                    </div>
+                    <div class="camara-footer">
+                        <span class="camara-precio">$2,400.00</span>
+                        <button class="btn-ver" onclick="abrirCotizacion('Dahua IP Doble Lente WiFi 6MP (HN-DAH02)')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="camara-card">
+                <div class="camara-img">
+                    <span class="badge">6 MP Cloud</span>
+                    <img src="img catalogo/DAHUA DOBLE ANTENAS.jpeg" alt="Cámara Dahua IP Doble Lente Cloud">
+                </div>   
+                <div class="camara-info">
+                    <div>
+                        <p class="camara-sku">HN-DAH03</p>
+                        <h3 class="camara-nombre">Dahua IP Doble Lente Cloud</h3>
+                        <p class="camara-desc">Variante avanzada con soporte nativo optimizado para almacenamiento en la nube, detección humana y notificaciones instantáneas push vía app móvil.</p>
+                    </div>
+                    <div class="camara-accesorios">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>1 Caja chica de conexiones IP55</li>
+                            <li>MicroSD 32GB Western Digital</li>
+                            <li>20 metros de cable UTP (Cobre)</li>
+                        </ul>
+                    </div>
+                    <div class="camara-footer">
+                        <span class="camara-precio">$2,400.00</span>
+                        <button class="btn-ver" onclick="abrirCotizacion('Dahua IP Doble Lente WiFi Cloud (HN-DAH03)')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="camara-card">
+                <div class="camara-img">
+                    <span class="badge">5 Megapíxeles</span>
+                    <img src="img catalogo/DAHUA DOMO.jpeg" alt="Cámara Dahua Domo Smart">
+                </div>
+                <div class="camara-info">
+                    <div>
+                        <p class="camara-sku">HN-DAH04</p>
+                        <h3 class="camara-nombre">Kit Dahua IP Domo Smart</h3>
+                        <p class="camara-desc">Cuenta con detección de movimiento optimizada, reconocimiento facial, disuasión activa mediante alarma con luz y sonido y audio de dos vías.</p>
+                    </div>
+                    <div class="camara-accesorios">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>Caja chica para conexiones IP55</li>
+                            <li>MicroSD 32GB Western Digital</li>
+                            <li>20 metros de cable UTP (Cobre)</li>
+                        </ul>
+                    </div>
+                    <div class="camara-footer">
+                        <span class="camara-precio">$2,250.00</span>
+                        <button class="btn-ver" onclick="abrirCotizacion('Kit Dahua IP Domo Smart 5MP (HN-DAH04)')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="camara-card">
+                <div class="camara-img">
+                    <span class="badge">WiFi 6</span>
+                    <img src="img catalogo/DAHUA BOLA.jpeg" alt="Cámara Dahua PT WiFi">
+                </div>          
+                <div class="camara-info">
+                    <div>
+                        <p class="camara-sku">HN-DAH05</p>
+                        <h3 class="camara-nombre">Dahua IP PT WiFi 360°</h3>
+                        <p class="camara-desc">Detección de humanos y vehículos inteligente. Integra tecnología de transmisión inalámbrica rápida WiFi 6 y protección a la intemperie IP65.</p>
+                    </div>
+                    <div class="camara-accesorios">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>1 Caja chica de conexiones IP55</li>
+                            <li>MicroSD 32GB Western Digital</li>
+                            <li>20 metros de cable UTP (Cobre)</li>
+                        </ul>
+                    </div>
+                    <div class="camara-footer">
+                        <span class="camara-precio">$2,300.00</span>
+                        <button class="btn-ver" onclick="abrirCotizacion('Dahua IP PT WiFi 5MP (HN-DAH05)')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="seccion-titulo">
+            <h2>02 / Kits de 2 Cámaras de Alta Definición</h2>
+            <span>Monitoreo Residencial</span>
+        </div>
+
+        <div class="grid-catalogo">
+            <div class="camara-card">
+                <div class="camara-img">
+                    <span class="badge">IMOU 2MP</span>
+                    <img src="img catalogo/IMOU IP DOMO.jpeg" alt="Kit 2 IMOU 2MP">
+                </div>          
+                <div class="camara-info">
+                    <div>
+                        <p class="camara-sku">HN-IM02</p>
+                        <h3 class="camara-nombre">Kit 2 Cámaras IMOU Domo</h3>
+                        <p class="camara-desc">Resolución Full HD, alertas preventivas con luz estroboscópica y sonido de sirena, visión nocturna en color y bocina/micrófono integrados.</p>
+                    </div>
+                    <div class="camara-accesorios">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>Cajas de conexiones IP55</li>
+                            <li>Memorias MicroSD 32GB WD</li>
+                            <li>20 metros de cable UTP por cámara</li>
+                        </ul>
+                    </div>
+                    <div class="camara-footer">
+                        <span class="camara-precio">$1,850.00</span>
+                        <button class="btn-ver" onclick="abrirCotizacion('Kit 2 Camaras IMOU IP Domo 2MP (HN-IM02)')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="camara-card">
+                <div class="camara-img">
+                    <span class="badge">IMOU 5MP</span>
+                    <img src="img catalogo/IMOU IP DOMO.jpeg" alt="Kit 2 IMOU 5MP">
+                </div>          
+                <div class="camara-info">
+                    <div>
+                        <p class="camara-sku">HN-IM05</p>
+                        <h3 class="camara-nombre">Kit 2 Cámaras IMOU Pro</h3>
+                        <p class="camara-desc">Mayor resolución y nitidez de 5 megapíxeles. Conserva alarmas de luz y sonido integradas, audio bidireccional y monitoreo 24/7 a color.</p>
+                    </div>
+                    <div class="camara-accesorios">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>Cajas de conexiones IP55</li>
+                            <li>Memorias MicroSD 32GB WD</li>
+                            <li>20 metros de cable UTP por cámara</li>
+                        </ul>
+                    </div>
+                    <div class="camara-footer">
+                        <span class="camara-precio">$2,250.00</span>
+                        <button class="btn-ver" onclick="abrirCotizacion('Kit 2 Camaras IMOU IP Domo 5MP (HN-IM05)')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="camara-card">
+                <div class="camara-img">
+                    <span class="badge">ColorVu UTP</span>
+                    <img src="img catalogo/HILOOK.jpeg" alt="Kit 2 HiLook UTP">
+                </div>          
+                <div class="camara-info">
+                    <div>
+                        <p class="camara-sku">HN-HL02U</p>
+                        <h3 class="camara-nombre">Kit 2 HiLook Full HD UTP</h3>
+                        <p class="camara-desc">Tecnología profesional de HikVision. Cámaras ColorVu con visualización continua a color por la noche y audio de alta fidelidad.</p>
+                    </div>
+                    <div class="camara-accesorios">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>Disco Duro dedicado de 500 GB</li>
+                            <li>2 cajas chicas + 1 caja grande IP55</li>
+                            <li>2 cables de red UTP (100% cobre)</li>
+                        </ul>
+                    </div>
+                    <div class="camara-footer">
+                        <span class="camara-precio">$3,700.00</span>
+                        <button class="btn-ver" onclick="abrirCotizacion('Kit 2 Camaras Full HD HiLook UTP (HN-HL02U)')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="camara-card">
+                <div class="camara-img">
+                    <span class="badge">ColorVu Coaxial</span>
+                    <img src="img catalogo/HILOOK KIT2.jpeg" alt="Kit 2 HiLook Coaxial">
+                </div>          
+                <div class="camara-info">
+                    <div>
+                        <p class="camara-sku">HN-HL02C</p>
+                        <h3 class="camara-nombre">Kit 2 HiLook Coaxial</h3>
+                        <p class="camara-desc">Respaldo y estabilidad analógica en Full HD de HikVision. Visión a color en total oscuridad, audio integrado de alta sensibilidad.</p>
+                    </div>
+                    <div class="camara-accesorios">
+                        <p>Includes:</p>
+                        <ul>
+                            <li>Disco Duro dedicado de 500 GB</li>
+                            <li>2 cajas chicas + 1 caja grande IP55</li>
+                            <li>2 cables coaxiales de 18 metros</li>
+                        </ul>
+                    </div>
+                    <div class="camara-footer">
+                        <span class="camara-precio">$3,500.00</span>
+                        <button class="btn-ver" onclick="abrirCotizacion('Kit 2 Camaras Full HD HiLook Coaxial (HN-HL02C)')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="seccion-titulo">
+            <h2>03 / Sistemas Multi-Cámara Profesionales</h2>
+            <span>Seguridad Comercial y Corporativa</span>
+        </div>
+
+        <div class="grid-catalogo">
+            <div class="camara-card">
+                <div class="camara-img">
+                    <span class="badge">3 Cámaras</span>
+                    <img src="img catalogo/HILOOK KIT3.jpeg" alt="Kit 3 HiLook">
+                </div>          
+                <div class="camara-info">
+                    <div>
+                        <p class="camara-sku">HN-HL03</p>
+                        <h3 class="camara-nombre">Kit 3 Cámaras HiLook HD</h3>
+                        <p class="camara-desc">Por HikVision. Mayor rango perimetral con tecnología nocturna ColorVu permanente a color y recolección de audio unificada.</p>
+                    </div>
+                    <div class="camara-accesorios">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>Disco Duro dedicado de 500 GB</li>
+                            <li>3 cajas chicas + 1 caja grande IP55</li>
+                            <li>20 metros de cable UTP por cámara</li>
+                        </ul>
+                    </div>
+                    <div class="camara-footer">
+                        <span class="camara-precio">$4,700.00</span>
+                        <button class="btn-ver" onclick="abrirCotizacion('Kit 3 Camaras Full HD HiLook 2MP (HN-HL03)')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="camara-card">
+                <div class="camara-img">
+                    <span class="badge">4 Cámaras</span>
+                    <img src="img catalogo/HILOOK KIT4.jpeg" alt="Kit 4 HiLook">
+                </div>          
+                <div class="camara-info">
+                    <div>
+                        <p class="camara-sku">HN-HL04</p>
+                        <h3 class="camara-nombre">Kit 4 Cámaras HiLook HD</h3>
+                        <p class="camara-desc">Circuito cerrado completo de 4 canales desarrollado por HikVision. Visión nocturna nítida a color, audio y cable HDMI de alta velocidad.</p>
+                    </div>
+                    <div class="camara-accesorios">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>Disco Duro de 500 GB de capacidad</li>
+                            <li>4 cajas chicas + 2 cajas grandes IP55</li>
+                            <li>20m cable UTP por cámara + HDMI 1.5m</li>
+                        </ul>
+                    </div>
+                    <div class="camara-footer">
+                        <span class="camara-precio">$6,800.00</span>
+                        <button class="btn-ver" onclick="abrirCotizacion('Kit 4 Camaras Full HD HiLook 2MP (HN-HL04)')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="camara-card">
+                <div class="camara-img">
+                    <span class="badge">5 Cámaras</span>
+                    <img src="img catalogo/HILOOK KIT5.jpeg" alt="Kit 5 HiLook">
+                </div>          
+                <div class="camara-info">
+                    <div>
+                        <p class="camara-sku">HN-HL05</p>
+                        <h3 class="camara-nombre">Kit 5 Cámaras HiLook HD</h3>
+                        <p class="camara-desc">Por HikVision. Monitoreo masivo multicanal a color 24/7. Integra almacenamiento expandido para mayor tiempo de grabaciones continuas.</p>
+                    </div>
+                    <div class="camara-accesorios">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>Disco Duro ampliado a 1 Terabyte</li>
+                            <li>5 cajas chicas + 2 cajas grandes IP55</li>
+                            <li>20 metros de cable UTP por cámara</li>
+                        </ul>
+                    </div>
+                    <div class="camara-footer">
+                        <span class="camara-precio">$7,900.00</span>
+                        <button class="btn-ver" onclick="abrirCotizacion('Kit 5 Camaras Full HD HiLook 2MP (HN-HL05)')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="camara-card">
+                <div class="camara-img">
+                    <span class="badge">6 Cámaras</span>
+                    <img src="img catalogo/HILOOK KIT6.jpeg" alt="Kit 6 HiLook">
+                </div>          
+                <div class="camara-info">
+                    <div>
+                        <p class="camara-sku">HN-HL06</p>
+                        <h3 class="camara-nombre">Kit 6 Cámaras HiLook HD</h3>
+                        <p class="camara-desc">Por HikVision. Arquitectura de seguridad empresarial robusta con 6 frentes ColorVu activos, audio integrado de alta definición y cable HDMI.</p>
+                    </div>
+                    <div class="camara-accesorios">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>Disco Duro ampliado a 1 Terabyte</li>
+                            <li>6 cajas chicas + 2 cajas grandes IP55</li>
+                            <li>20m cable UTP por cámara + HDMI 1.5m</li>
+                        </ul>
+                    </div>
+                    <div class="camara-footer">
+                        <span class="camara-precio">$8,800.00</span>
+                        <button class="btn-ver" onclick="abrirCotizacion('Kit 6 Camaras Full HD HiLook 2MP (HN-HL06)')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="camara-card">
+                <div class="camara-img">
+                    <span class="badge">8 Cámaras</span>
+                    <img src="img catalogo/HILOOK KIT8.jpeg" alt="Kit 8 HiLook">
+                </div>          
+                <div class="camara-info">
+                    <div>
+                        <p class="camara-sku">HN-HL08</p>
+                        <h3 class="camara-nombre">Kit 8 Cámaras HiLook HD</h3>
+                        <p class="camara-desc">Por HikVision. Sistema integral de máxima cobertura residencial o empresarial. Visualización simultánea, audio continuo y visión ColorVu.</p>
+                    </div>
+                    <div class="camara-accesorios">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>Disco Duro masivo de 2 Terabytes</li>
+                            <li>8 cajas chicas + 2 cajas grandes IP55</li>
+                            <li>1 Bobina de cable UTP + Fuente Central</li>
+                            <li>1 Cable HDMI de 1.5 metros</li>
+                        </ul>
+                    </div>
+                    <div class="camara-footer">
+                        <span class="camara-precio">$14,500.00</span>
+                        <button class="btn-ver" onclick="abrirCotizacion('Kit 8 Camaras Full HD HiLook 2MP (HN-HL08)')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="camara-card">
+                <div class="camara-img">
+                    <span class="badge">Uso Rudo 5MP</span>
+                    <img src="img catalogo/HIKIVISION KIT6.jpeg" alt="Kit 6 Hikvision Metal">
+                </div>          
+                <div class="camara-info">
+                    <div>
+                        <p class="camara-sku">HN-HIK06M</p>
+                        <h3 class="camara-nombre">Kit Hikvision Bullet Metal</h3>
+                        <p class="camara-desc">Gama industrial de 5MP. Estructuras metálicas de alta resistencia a impactos y vandalismo, audio de alta ganancia y almacenamiento masivo para CCTV.</p>
+                    </div>
+                    <div class="camara-accesorios">
+                        <p>Incluye:</p>
+                        <ul>
+                            <li>Disco WD Purple 3TB (Alta Duración)</li>
+                            <li>6 cajas chicas + 2 cajas grandes IP55</li>
+                            <li>20 metros de cable UTP por cámara</li>
+                        </ul>
+                    </div>
+                    <div class="camara-footer">
+                        <span class="camara-precio">$13,450.00</span>
+                        <button class="btn-ver" onclick="abrirCotizacion('Kit Hikvision 6 Camaras Metalicas 5MP (HN-HIK06M)')">Cotizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="modalCotizar" class="modal-cotizacion">
+        <div class="contenedor-formulario">
+            <span class="cerrar-modal" onclick="cerrarCotizacion()">&times;</span>
+            <h3>Formulario de Cotización</h3>
+            <p class="sub">Solicita una visita técnica o una cotización a tu medida sin costo.</p>
+            
+            <form action="https://formspree.io/f/mkolwwpk" method="POST">
+                <input type="hidden" id="asunto_correo" name="_subject" value="Nueva solicitud de cotización">
+                
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="Nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="Correo" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Teléfono / WhatsApp:</label>
+                    <input type="tel" id="telefono" name="Telefono" placeholder="10 dígitos" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="servicio">Servicio Requerido:</label>
+                    <select id="servicio" name="Servicio_Interes" required>
+                        <option value="Camaras de Seguridad" selected>Instalación de Cámaras de Seguridad (CCTV)</option>
+                        <option value="Internet Residencial">Internet Residencial (Fibra / Inalámbrico)</option>
+                        <option value="Paquete Completo">Paquete Completo (Internet + Cámaras)</option>
+                        <option value="Soporte Tecnico">Soporte Técnico Especializado</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensaje">Detalles de tu Ubicación o Solicitud:</label>
+                    <textarea id="mensaje" name="Mensaje_o_Ubicacion" rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Solicitud</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Hidalnet - Conectividad y Seguridad Local. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const modal = document.getElementById('modalCotizar');
+        const txtMensaje = document.getElementById('mensaje');
+        const correoAsunto = document.getElementById('asunto_correo');
+
+        function abrirCotizacion(productoNombre) {
+            modal.classList.add('activo');
+            correoAsunto.value = "Cotización de catálogo: " + productoNombre;
+            txtMensaje.value = "Hola Hidalnet, me interesa solicitar una cotización para el equipo visto en el catálogo: " + productoNombre + ". Quedo a la espera de su respuesta. Mi ubicación es: ";
+        }
+
+        function cerrarCotizacion() {
+            modal.classList.remove('activo');
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                cerrarCotizacion();
+            }
+        }
+    </script>
+
+</body>
+</html>

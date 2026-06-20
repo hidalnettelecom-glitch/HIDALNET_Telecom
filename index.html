@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5BYX54GF6W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5BYX54GF6W');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIDALNET - Conectividad y Seguridad Smart</title>
+    
+    <style>
+        :root {
+            --color-primario: #0a192f;
+            --color-secundario: #00b4d8;
+            --azul-tecnologico: #0052cc;
+            --color-fondo: #f4f6f9;
+            --color-tarjeta: #ffffff;
+            --texto-oscuro: #333333;
+            --texto-mutado: #555555;
+            --fuente-titulos: 'Orbitron', 'Segoe UI', sans-serif;
+            --fuente-cuerpo: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--fuente-cuerpo);
+        }
+
+        body {
+            background-color: var(--color-fondo);
+            color: var(--texto-oscuro);
+            line-height: 1.6;
+        }
+
+        /* NAVEGACIÓN */
+        header.site-header {
+            background-color: var(--color-primario);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo h1 {
+            color: white;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            font-family: var(--fuente-titulos);
+        }
+
+        .logo span {
+            color: var(--color-secundario);
+            font-family: var(--fuente-titulos);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--color-secundario);
+        }
+       /* IMAGEN EN EL MENÚ (UBICADA AL CENTRO) */
+        .img-menu-header {
+            width: 70px; /* Tamaño más grande y visible */
+            height: 100px; /* Proporción rectangular ajustada */
+            object-fit: cover; /* Evita que la imagen se distorsione */
+            border-radius: 6px; /* Bordes rectangulares limpios */
+            border: none; /* Se elimina el contorno de color */
+            transition: transform 0.3s ease;
+        }
+
+        .img-menu-header:hover {
+            transform: scale(1.08); /* Efecto sutil al pasar el cursor */
+        }
+
+        .img-menu-header:hover {
+            transform: scale(1.1);
+        }
+
+        /* HERO BANNER */
+        .hero {
+            background: linear-gradient(135deg, rgba(10,25,47,0.95) 0%, rgba(0,82,204,0.85) 100%);
+            color: white;
+            padding: 6rem 5%;
+            text-align: center;
+            border-bottom: 4px solid var(--color-secundario);
+        }
+
+        .hero h2 {
+            font-family: var(--fuente-titulos);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            color: #ccd6f6;
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .btn-cta {
+            background-color: var(--color-secundario);
+            color: var(--color-primario);
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 14px rgba(0, 180, 216, 0.4);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-cta:hover {
+            background-color: white;
+            transform: translateY(-2px);
+        }
+
+        /* SERVICIOS */
+        .container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .titulo-principal {
+            text-align: center;
+            font-family: var(--fuente-titulos);
+            color: var(--color-primario);
+            margin-bottom: 40px;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .titulo-principal::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--color-secundario);
+            margin: 10px auto 0 auto;
+        }
+
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card-servicio {
+            background-color: var(--color-tarjeta);
+            border-radius: 8px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            border: 1px solid #e1e8ed;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card-servicio:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-secundario);
+        }
+
+        .icon-box {
+            font-size: 3rem;
+            color: var(--azul-tecnologico);
+            margin-bottom: 20px;
+        }
+
+        .card-servicio h3 {
+            color: var(--color-primario);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .card-servicio p {
+            color: var(--texto-mutado);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-secundario {
+            color: var(--azul-tecnologico);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .btn-secundario:hover {
+            color: var(--color-primario);
+        }
+
+        footer {
+            background-color: var(--color-primario);
+            color: white;
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 80px;
+            font-size: 0.9rem;
+            border-top: 3px solid var(--color-secundario);
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Hidal<span>net</span></h1>
+            </div>     
+           <img src="hidalnet/logo.png" alt="Perfil/Icono" class="img-menu-header">
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Conectividad de Alta Velocidad y Seguridad Inteligente</h2>
+        <p>Llevamos internet estable por fibra óptica e inalámbrico y protegemos lo que más quieres con sistemas de videovigilancia CCTV de última generación.</p>
+        <a href="catalogo.html" class="btn-cta">Ver Catálogo de Cámaras</a>
+    </section>
+
+    <main class="container">
+        <h2 class="titulo-principal">Nuestras Soluciones Tecnológicas</h2>
+        
+        <div class="grid-servicios">
+            <div class="card-servicio">
+                <div class="icon-box">🌐</div>
+                <h3>Internet Residencial y Comercial</h3>
+                <p>Enlaces estables de alta velocidad diseñados para un óptimo rendimiento en streaming, teletrabajo, clases virtuales y entretenimiento sin interrupciones.</p>
+                <a href="contacto.html" class="btn-secundario">Solicitar Cobertura &rarr;</a>
+            </div>
+
+            <div class="card-servicio">
+                <div class="icon-box">📹</div>
+                <h3>Sistemas de Videovigilancia (CCTV)</h3>
+                <p>Kits profesionales e instalación integral de cámaras de alta definición con monitoreo en tiempo real desde tu smartphone, visión nocturna y detección inteligente.</p>
+                <a href="catalogo.html" class="btn-secundario">Explorar Paquetes &rarr;</a>
+            </div>
+
+            <div class="card-servicio">
+                <div class="icon-box">🛠️</div>
+                <h3>Soporte Técnico Especializado</h3>
+                <p>Mantenimiento preventivo, corrección de fallas de red, configuración de routers y optimización perimetral de seguridad con técnicos certificados locales.</p>
+                <a href="contacto.html" class="btn-secundario">Contactar Ingeniero &rarr;</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Hidalnet - Conectividad y Seguridad Local. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
