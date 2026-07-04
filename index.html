@@ -40,7 +40,7 @@
             line-height: 1.6;
         }
 
-        /* NAVEGACIÓN */
+       /* NAVEGACIÓN */
         header.site-header {
             background-color: var(--color-primario);
             padding: 1rem 5%;
@@ -52,7 +52,7 @@
 
         .navbar {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Distribuye logo, imagen y menú equitativamente */
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
@@ -73,6 +73,7 @@
         .nav-links {
             display: flex;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links li {
@@ -89,7 +90,13 @@
         .nav-links a:hover, .nav-links a.active {
             color: var(--color-secundario);
         }
-             border-radius: 6px; /* Bordes rectangulares limpios */
+
+       /* IMAGEN EN EL MENÚ (UBICADA AL CENTRO) */
+        .img-menu-header {
+            width: 70px; /* Tamaño más grande y visible */
+            height: 100px; /* Proporción rectangular ajustada */
+            object-fit: cover; /* Evita que la imagen se distorsione */
+            border-radius: 6px; /* Bordes rectangulares limpios */
             border: none; /* Se elimina el contorno de color */
             transition: transform 0.3s ease;
         }
@@ -101,14 +108,6 @@
         .img-menu-header:hover {
             transform: scale(1.1);
         }
-                /* BANNER */
-        .banner-interno {
-            background: linear-gradient(135deg, rgba(10,25,47,0.95) 0%, rgba(0,82,204,0.85) 100%);
-            color: white;
-            padding: 4rem 5%;
-            text-align: center;
-            border-bottom: 4px sol
-
         /* HERO BANNER */
         .hero {
             background: linear-gradient(135deg, rgba(10,25,47,0.95) 0%, rgba(0,82,204,0.85) 100%);
