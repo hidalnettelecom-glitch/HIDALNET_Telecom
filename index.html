@@ -40,7 +40,7 @@
             line-height: 1.6;
         }
 
-/* NAVEGACIÓN */
+        /* NAVEGACIÓN */
         header.site-header {
             background-color: var(--color-primario);
             padding: 1rem 5%;
@@ -52,7 +52,7 @@
 
         .navbar {
             display: flex;
-            justify-content: space-between; /* Distribuye logo, imagen y menú equitativamente */
+            justify-content: space-between; 
             align-items: center;
             max-width: 1200px;
             margin: 0 auto;
@@ -91,30 +91,28 @@
             color: var(--color-secundario);
         }
 
-       /* IMAGEN EN EL MENÚ (UBICADA AL CENTRO) */
+        /* IMAGEN EN EL MENÚ (UBICADA AL CENTRO) */
         .img-menu-header {
-            width: 70px; /* Tamaño más grande y visible */
-            height: 100px; /* Proporción rectangular ajustada */
-            object-fit: cover; /* Evita que la imagen se distorsione */
-            border-radius: 6px; /* Bordes rectangulares limpios */
-            border: none; /* Se elimina el contorno de color */
+            width: 70px; 
+            height: 100px; 
+            object-fit: cover; 
+            border-radius: 6px; 
+            border: none; 
             transition: transform 0.3s ease;
-        }
-
-        .img-menu-header:hover {
-            transform: scale(1.08); /* Efecto sutil al pasar el cursor */
         }
 
         .img-menu-header:hover {
             transform: scale(1.1);
         }
-                /* BANNER */
+        
+        /* BANNER INTERNO CORREGIDO */
         .banner-interno {
             background: linear-gradient(135deg, rgba(10,25,47,0.95) 0%, rgba(0,82,204,0.85) 100%);
             color: white;
             padding: 4rem 5%;
             text-align: center;
-            border-bottom: 4px sol
+            border-bottom: 4px solid var(--color-secundario);
+        }
 
         /* HERO BANNER */
         .hero {
@@ -265,7 +263,7 @@
                 <li><a href="nosotros.html">Sobre Nosotros</a></li>
                 <li><a href="catalogo.html">Catálogo</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="aviso_de_privacidad.html">Aviso de Privacidad</a></li>
+                <li><a href="aviso_de_privacidad.html">Aviso de Privacidad</a></li>
             </ul>
         </nav>
     </header>
