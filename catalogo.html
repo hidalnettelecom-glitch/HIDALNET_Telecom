@@ -445,6 +445,57 @@
             .seccion-titulo h2 { font-size: 1.2rem; }
             .contenedor-formulario { padding: 1.5rem; }
         }
+        /* ==========================================
+   AJUSTES PARA PANTALLAS MÓVILES (RESPONSIVE)
+   ========================================== */
+
+/* Regla para pantallas menores a 768px (Celulares) */
+@media (max-width: 768px) {
+    
+    /* 1. Evita que la pantalla se desborde a los lados */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* 2. Cambia la barra de navegación a formato vertical */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 10px 0;
+    }
+
+    /* 3. Acomoda los enlaces en filas ordenadas o centraditos */
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links li {
+        margin-left: 0; /* Quita el margen lateral de laptop */
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+        padding: 5px 8px;
+        display: inline-block;
+    }
+
+    /* 4. Ajusta la imagen del menú si es necesario */
+    .img-menu-header {
+        width: 70px;
+        height: auto;
+    }
+
+    /* 5. Asegura que los banners y contenedores no sobrepasen el ancho */
+    .banner-interno, .container, .container-legal {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+}
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
 </head>
